@@ -1,3 +1,6 @@
+<?php 
+	include("db/connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Login</title>
+  <title>Curso PHP Avanzado</title>
 
   <!-- Custom fonts for this template-->
   <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,13 +22,26 @@
 
 </head>
 
-<body class="bg-dark">
 
+<body class="bg-dark">
   <div class="container">
+  <?php
+  if (ISSET($_SESSION['MESSAGE'])) {
+  ?>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>ERROR DE SESION </strong> <?php ECHO $_SESSION['MESSAGE']; ?>.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+  <?php
+    session_destroy();
+    }
+  ?>
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Iniciar Sesion</div>
       <div class="card-body">
-        <form>
+        <form action="db/inicio_sesion.php" method="POST">
           <div class="form-group">
             <div class="form-label-group">
               <input type="text" id="usuario" name="txtusuario" class="form-control" required="required" autofocus="autofocus">
@@ -38,7 +54,7 @@
               <label for="password">Password</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.php">Ingresar</a>
+          <button class="btn btn-primary btn-block">Ingresar</button>
         </form>
       </div>
     </div>
