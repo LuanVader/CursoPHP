@@ -1,88 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<link href="assets/css/login.css">
 
-	
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SB Admin - Login</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="assets/css/sb-admin.css" rel="stylesheet">
+
 </head>
-<body>
-	<div class="container">
-		<div class="row">
-			
-	<!-- Mixins-->
-	<!-- Pen Title-->
-	<div class="pen-title">
-	  <h1>Material Login Form</h1>
-	</div>
-	<div class="container">
-	  <div class="card"></div>
-	  <div class="card">
-	    <h1 class="title">Login</h1>
-	    <form>
-	      <div class="input-container">
-	        <input type="text" id="Username" required="required"/>
-	        <label for="Username">Username</label>
-	        <div class="bar"></div>
-	      </div>
-	      <div class="input-container">
-	        <input type="password" id="Password" required="required"/>
-	        <label for="Password">Password</label>
-	        <div class="bar"></div>
-	      </div>
-	      <div class="button-container">
-	        <button><span>Go</span></button>
-	      </div>
-	      <div class="footer"><a href="#">Forgot your password?</a></div>
-	    </form>
-	  </div>
-	  <div class="card alt">
-	    <div class="toggle"></div>
-	    <h1 class="title">Register
-	      <div class="close"></div>
-	    </h1>
-	    <form>
-	      <div class="input-container">
-	        <input type="text" id="Username" required="required"/>
-	        <label for="Username">Username</label>
-	        <div class="bar"></div>
-	      </div>
-	      <div class="input-container">
-	        <input type="password" id="Password" required="required"/>
-	        <label for="Password">Password</label>
-	        <div class="bar"></div>
-	      </div>
-	      <div class="input-container">
-	        <input type="password" id="Repeat Password" required="required"/>
-	        <label for="Repeat Password">Repeat Password</label>
-	        <div class="bar"></div>
-	      </div>
-	      <div class="button-container">
-	        <button><span>Next</span></button>
-	      </div>
-	    </form>
-	  </div>
-	</div>
-	<!-- Portfolio--><a id="portfolio" href="http://pkshopy.com/farooqshad/" title="View my portfolio!"><i class="fa fa-link"></i></a>
-		</div>
-	</div>
-	
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(document).rseady(function(){
-		$('.toggle').on('click', function() {
-		  $('.container').stop().addClass('active');
-		});
 
-		$('.close').on('click', function() {
-		  $('.container').stop().removeClass('active');
-		});
+<body class="bg-dark">
 
-		});
-	</script>
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <label for="inputEmail">Email address</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <label for="inputPassword">Password</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me">
+                Remember Password
+              </label>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small mt-3" href="register.html">Register an Account</a>
+          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="assets/js/jquery.easing.min.js"></script>
+
 </body>
-</html>
 
+</html>
