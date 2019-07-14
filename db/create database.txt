@@ -1,0 +1,26 @@
+CREATE DATABASE ALMACEN
+GO
+USE ALMACEN
+GO
+CREATE TABLE PRODUCTOS
+(
+iID			INT PRIMARY KEY IDENTITY,
+vNOMPROD	VARCHAR(60),
+vCATEGO		VARCHAR(100),
+vDESCRIP	VARCHAR(100),
+mPRECIO		MONEY,
+iSTOCK		INT
+)
+GO
+INSERT INTO PRODUCTOS
+		(vNOMPROD,							  vCATEGO,			vDESCRIP,				mPRECIO,	iSTOCK) 
+VALUES	('Cerveza tibetana Barley',			  'Bebidas',		'24 - bot. 12 l',		19.00,		17),
+		('Sirope de regaliz',				  'Condimentos',	'12 - bot. 550 ml',		10.00,		13),
+		('Especias Cajun del chef Anton',	  'Condimentos',	'48 - frascos 6 l',		22.00,		53),
+		('Peras secas orgánicas del tío Bob', 'Frutas/Verduras','12 - paq. 1 kg	',		30.00,		15),
+		('Salsa de arándanos Northwoods',	  'Condimentos',	'12 - frascos 12 l',	40.00,		6),
+		('Pez espada',						  'Pescado/Marisco','12 - frascos 200 ml',	31.00,		31),
+		('Queso Manchego La Pastora',		  'Lácteos',		'10 - paq. 500 g',		38.00,		86),
+		('Cuajada de judías',				  'Frutas/Verduras','40 - paq. 100 g',		23.25,		35),
+		('Salsa de soja baja en sodio',		  'Condimentos',	'24 - bot. 250 ml',		15.50,		39);
+
